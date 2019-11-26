@@ -1,0 +1,11 @@
+spring:
+  profiles:
+    active: native
+  application:
+    name: ${ES_BACKEND_HOST:backend}
+  cloud:
+    config:
+      uri: http://${ES_CONFIG_SERVER_HOST:localhost}:${ES_CONFIG_SERVER_PORT:8888}
+      username: root
+      password: admin_password
+      fail-fast: true
